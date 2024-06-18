@@ -19,7 +19,7 @@ headers = {
 
 # Function to get the current Unix time minus 10 seconds
 def get_since_time():
-    return int(time.time()) - 10
+    return int(time.time()) - 6
 
 # Function to load existing data from the JSON file or create a new one
 def load_existing_data(filename):
