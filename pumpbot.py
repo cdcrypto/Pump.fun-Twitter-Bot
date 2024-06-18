@@ -200,9 +200,9 @@ def run_buy_function():
         current_profiles = load_existing_data(profile_data_file)
 
         for profile in current_profiles:
-            if profile not in previous_profiles and profile['url'].startswith('https://pump.fun/') and profile['followers_count'] > 10: #REPLACE WITH MINIMUM FOLLOWER COUNT
+            if profile not in previous_profiles and profile['url'].startswith('https://pump.fun/') and profile['followers_count'] > 100000: #REPLACE WITH MINIMUM FOLLOWER COUNT
                 mint_str = profile['url'].split('https://pump.fun/')[-1]
-                buy(mint_str=mint_str, sol_in=0.001, slippage_decimal=0.50)  #REPLACE WITH YOUR DESIRED SOL BUY AMOUNT
+                buy(mint_str=mint_str, sol_in=1.001, slippage_decimal=0.90)  #REPLACE WITH YOUR DESIRED SOL BUY AMOUNT
                 logging.info('Executed buy function for mint_str: %s', mint_str)
 
         previous_profiles = current_profiles
