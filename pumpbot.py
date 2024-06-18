@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO, filename='twitter_search.log',
 # Define base API request parameters
 url = "https://api.socialdata.tools/twitter/search"
 headers = {
-    'Authorization': 'Bearer 324|2Oqe1A5MuVzEnHyu3HbMFmmOFnJHzZEVnRvFCIuC0ddbdc14',
+    'Authorization': 'Bearer YOURKEYHERE',
     'Accept': 'application/json'
 }
 
