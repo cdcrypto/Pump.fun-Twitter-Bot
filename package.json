@@ -1,0 +1,48 @@
+{
+  "name": "socialsnipe-client",
+  "version": "1.0.0",
+  "description": "TypeScript client for socialsnipe.fun protocol",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",
+    "@project-serum/anchor": "^0.26.0",
+    "@solana/spl-token": "^0.3.8",
+    "@solana/web3.js": "^1.87.1",
+    "@vercel/analytics": "^1.4.1",
+    "axios": "^1.7.7",
+    "bs58": "^5.0.0",
+    "buffer": "^6.0.3",
+    "cross-fetch": "^4.0.0",
+    "date-fns": "^4.1.0",
+    "encoding": "^0.1.13",
+    "next": "13.5.4",
+    "qrcode": "^1.5.4",
+    "qrcode.react": "^4.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-tooltip": "^5.28.0",
+    "supports-color": "^9.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.6",
+    "@types/bn.js": "^5.1.6",
+    "@types/node": "^20.8.2",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^18.2.24",
+    "@types/react-dom": "^18.2.8",
+    "autoprefixer": "^10.4.16",
+    "debug": "^4.3.7",
+    "postcss": "^8.4.31",
+    "tailwind-scrollbar": "^3.1.0",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2"
+  }
+}
