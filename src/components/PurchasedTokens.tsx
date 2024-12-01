@@ -49,7 +49,7 @@ export default function PurchasedTokens() {
 
   const fetchSolBalance = useCallback(async (publicKey: string) => {
     try {
-      const connection = new Connection(process.env.NEXT_PUBLIC_HELIUS_RPC_URL || '');
+      const connection = new Connection(process.env.NEXT_PUBLIC_HELIUS_RPC_URL);
       const balance = await connection.getBalance(new PublicKey(publicKey));
       if (mountedRef.current) {
         setSolBalance(balance / LAMPORTS_PER_SOL);
@@ -83,7 +83,7 @@ export default function PurchasedTokens() {
       // Fetch SOL balance
       await fetchSolBalance(publicKey);
 
-      const response = await fetch(process.env.NEXT_PUBLIC_HELIUS_RPC_URL || '', {
+      const response = await fetch(process.env.NEXT_PUBLIC_HELIUS_RPC_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -140,7 +140,7 @@ export default function PurchasedTokens() {
     if (!holdings.length) return;
 
     try {
-      const response = await fetch(process.env.NEXT_PUBLIC_HELIUS_RPC_URL || '', {
+      const response = await fetch(process.env.NEXT_PUBLIC_HELIUS_RPC_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

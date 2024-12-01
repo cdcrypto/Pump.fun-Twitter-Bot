@@ -37,8 +37,8 @@ export const PRIORITY_FEE_IX = ComputeBudgetProgram.setComputeUnitPrice({
 export const COMMITMENT_LEVEL = 'confirmed';
 
 // RPC Settings
-export const RPC_ENDPOINT = process.env.NEXT_PUBLIC_HELIUS_RPC_URL || 'https://mainnet.helius-rpc.com/?api-key=f696d530-842d-4024-aedb-c707c4d18332';
-export const RPC_WEBSOCKET_ENDPOINT = RPC_ENDPOINT.replace('https://', 'wss://');
+export const RPC_ENDPOINT = process.env.NEXT_PUBLIC_HELIUS_RPC_URL;
+export const RPC_WEBSOCKET_ENDPOINT = process.env.NEXT_PUBLIC_HELIUS_RPC_URL?.replace('https://', 'wss://');
 
 // Jito Settings
 export const JITO_TIP_PROGRAM_ID = new PublicKey('4P1KYhBSn7RMGG5pYjvKmzGQPRXHBeCkFGfgVzVwGfXg');

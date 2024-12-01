@@ -69,7 +69,7 @@ export class TwitterService {
   private ws: WebSocket | null = null;
   private reconnectAttempts = 0;
   private readonly maxReconnectAttempts = 5;
-  private readonly wsUrl = 'wss://web-production-9ecc.up.railway.app';
+  private readonly wsUrl = process.env.NEXT_PUBLIC_TWITTER_WS_URL;
   private subscribers: ((tweets: Tweet[], type: TweetType) => void)[] = [];
   private cachedTweets: { [key in TweetType]: Tweet[] } = {
     pumpfun: [],

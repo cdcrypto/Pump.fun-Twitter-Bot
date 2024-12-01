@@ -1,24 +1,71 @@
 # Pump.fun-Twitter-Bot
-Checks twitter every couple of seconds for new Tweets with Pump.Fun Contract addresses/links. Automatically buys pumpfun token based on criteria of how many followers the author of tweet has. For instance if you don't want to miss out on the next "Celebrity Coin" this program can be set to buy any token tweeted from account over 100K followers. 
+Automatically monitors and trades Pump.Fun tokens based on Twitter activity. The bot can be configured to automatically buy tokens when they are tweeted about, with customizable criteria such as minimum follower count for the tweet author.
 
-Setup and Run:
+## Features
+- Real-time Twitter monitoring for Pump.Fun contract addresses/links
+- Automatic token purchases based on configurable criteria
+- Follower count filtering to target high-impact tweets
+- Support for both Pump.fun and DexScreener links
+- Modern web interface for monitoring and configuration
+- Real-time order status tracking
+- Blacklist and buylist functionality
 
-Note: Must do this in proper order as below:
+## Setup and Configuration
 
-1. Replace PubKey, Private Key, and rpc Key in config.py with your desired wallet and rpc provider.
+1. Clone the repository and install dependencies:
+```bash
+npm install
+```
 
-2. Open Terminal and run command: python pump_twitter.py install
+2. Create a `.env` file in the root directory with the following variables:
+```env
+NEXT_PUBLIC_HELIUS_RPC_URL=YOUR_HELIUS_RPC_LINK
+NEXT_PUBLIC_TWITTER_WS_URL=YOUR_BACKEND_WS_URL
+```
+Replace:
+- `YOUR_HELIUS_RPC_LINK` with your Helius RPC endpoint
+- `YOUR_BACKEND_WS_URL` with the WebSocket backend URL for Twitter monitoring
 
-3. Create an account at socialdata.tools. we use this to get tweets rather than paying for twitter API access. This service is free to try but would cost maybe a dollar or so a day if you are running all day. 
-Generate an API key and copy it, it should look something like this "324|2O..........dbdc14" . Replace YOURKEYHERE in pummpbot.py with your new key. 
+3. Configure your trading settings in the web interface:
+- Set minimum follower count for auto-buying
+- Configure buy amount in SOL
+- Set slippage tolerance
+- Enable/disable auto-buying
+- Manage blacklisted addresses
+- Set token creation time filters
 
-4. On line 203 replace 10000 with your desired criteria for follower count. it is currently set to buy a token if tweeted by A twitter account with 10,000 followers
+## Running the Application
 
-5. On line 205 replace 1.001 with the amount of sol you want the bot to buy when criteria is met. it is currently set to 1.001 sol. 
+Development mode:
+```bash
+npm run dev
+```
 
-6. Save changes made and run terminal command : python pumpbot.py 
+Production build:
+```bash
+npm run build
+npm start
+```
 
-Will export logs to jsonn files and it automatically filters out bots that tweet a ton of links by only allowing for a trigger once from a given twitter account!
+## Security Notes
+- Never share your private keys or environment variables
+- Keep your `.env` file secure and never commit it to version control
+- Regularly monitor your wallet activity
+- Start with small trade amounts until you're comfortable with the bot's operation
 
+## Trading Settings
+The bot can be configured through the web interface with the following options:
+- Minimum follower count for auto-buying
+- Buy amount in SOL per trade
+- Slippage tolerance percentage
+- Token age restrictions
+- Blacklist for specific Twitter accounts
+- Buylist for trusted accounts
 
-Enjoy
+## Logs and Monitoring
+- All trading activity is logged in the web interface
+- Real-time order status updates
+- Transaction links to Solscan for verification
+- Error reporting and notifications
+
+Enjoy trading! Remember to always trade responsibly and never invest more than you can afford to lose.

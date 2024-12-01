@@ -40,7 +40,7 @@ export default function Home() {
 
     try {
       const keyPair = Keypair.fromSecretKey(bs58.decode(privateKey));
-      const connection = new Connection(process.env.NEXT_PUBLIC_HELIUS_RPC_URL || '', 'confirmed');
+      const connection = new Connection(process.env.NEXT_PUBLIC_HELIUS_RPC_URL, 'confirmed');
       const client = new PumpFunClient(connection, keyPair, process.env.NEXT_PUBLIC_HELIUS_RPC_URL, tradingSettings);
       setPumpFunClient(client);
     } catch (error) {

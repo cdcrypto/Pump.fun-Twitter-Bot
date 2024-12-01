@@ -87,7 +87,7 @@ class PumpFunClient {
   constructor(connection: Connection, wallet: Keypair, rpcEndpoint?: string, tradingSettings?: any) {
     this.connection = connection;
     this.wallet = wallet;
-    this.rpcEndpoint = rpcEndpoint || process.env.NEXT_PUBLIC_HELIUS_RPC_URL || '';
+    this.rpcEndpoint = rpcEndpoint || process.env.NEXT_PUBLIC_HELIUS_RPC_URL;
     this.tradingSettings = tradingSettings;
   }
 
